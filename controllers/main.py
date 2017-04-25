@@ -24,4 +24,4 @@ class LatestBlogPost(http.Controller):
                 "blog_post": blog_post,
                 "create_date": create_date
             })
-        return request.render("latest_blog_post.latest_blog_post_list", result)
+        return request.render("latest_blog_post.oe_latest_blog_post_list", result)

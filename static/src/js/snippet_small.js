@@ -5,7 +5,7 @@ var animation = require("web_editor.snippets.animation");
 latest_blog_post.registry.animation = animation.Class.extend({
     $.get('snippet/get_latest_blog_post').then(function(data){
         if(data){
-            $(".latest_blog_post_list").replaceWith(data)
+            $(".oe_latest_blog_post_list").replaceWith(data)
         }
     })
 })
