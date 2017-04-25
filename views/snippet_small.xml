@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="latest_blog_post_snippet" inherit_id="website.snippets">
+        <xpath expr="//div[@id='snippet_content']" position="after">
+            <div class="o_panel_header">
+                <i class="fa fa-cubes"/> Custom Snippet
+            </div>
+            <div class="o_panel_body">
+                <div>
+                    <div class="oe_snippet_thumbnail">
+                        <div style="background: white;box-shadow:none;-webkit-box-shadow:none;" class="oe_snippet_thumbnail_img" >
+                            <i class="fa fa-tasks fa-5x text-muted"></i>
+                        </div>
+                        <span class="oe_snippet_thumbnail_title">Latest Blog Post</span>
+                    </div>
+                    <div class="oe_snippet_body oe_latest_blog_post mb16 mt16">
+                        <div class="latest_blog_post_list">
+                            <div>Latest Blog Post</div>
+                        </div>
+                    </div>
+                </div>
+                <!--<t t-snippet="oepetstore.latest_blog_post" t-thumbnail="/latest_blog_post/static/src/css/img/block_well.png"/>-->
+            </div>
+        </xpath>
+        <xpath expr="//div[@id='snippet_options']" position="inside">
+            <div data-js='snippet_latest_blog_post'
+                data-selector=".oe_latest_blog_post"
+                data-drop-near="p, h1, h2, h3, blockquote, .well, .panel"
+                data-drop-in=".content"
+               >
+            </div>
+        </xpath>
+    </template>
+
+    <template id="latest_blog_post_list" name="Latest Blog Post List">
+        <t t-ignore="true">
+            <t t-if="blog_posts">
+                <div class="latest_blog_post_list">
+                    <div>
+                        <div class="header"><h4>Bài viết mới nhất</h4></div>
+                        <div t-foreach="blog_posts[:5]" t-as="blog_post" class="oe_website_overflow_ellipsis mb8">
+                            <div class="blog-post-item">
+                                <div class="blog-post-name">
+                                    <a t-att-href="blog_post['blog_post'].website_url"><t t-esc="blog_post['blog_post'].name"/></a>
+                                </div>
+                                <div class="create-date">
+                                    Ngày đăng: <t t-esc="blog_post['create_date']"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--<t t-if="len(events) > 5">-->
+                            <!--<div t-if="country">-->
+                                <!--<b><a t-att-href="'/event?country='+str(country.id)">See all events from <span t-esc="country.name"></span></a></b>-->
+                            <!--</div>-->
+                            <!--<div t-if="not country">-->
+                                <!--<b><a href="/event"> See all upcoming events </a></b>-->
+                            <!--</div>-->
+                        <!--</t>-->
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
