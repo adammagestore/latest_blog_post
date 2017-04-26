@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="oe_latest_blog_post_snippet" inherit_id="website.snippets">
+    <template id="oe_latest_blog_post_snippet" inherit_id="website.snippets" name="oe_latest_blog_post_snippet">
         <xpath expr="//div[@id='snippet_content']" position="after">
             <div class="o_panel_header">
                 <i class="fa fa-cubes"/> Custom Snippet by Adam
@@ -24,7 +24,7 @@
         </xpath>
         <xpath expr="//div[@id='snippet_options']" position="inside">
             <div data-js='oe_snippet_latest_blog_post'
-                data-selector=".oe_latest_blog_post"
+                data-selector=".oe_latest_blog_post_list"
                 data-drop-near="p, h1, h2, h3, blockquote, .well, .panel"
                 data-drop-in=".content"
                >
@@ -32,7 +32,7 @@
         </xpath>
     </template>
 
-    <template id="oe_latest_blog_post_list" name="Latest Blog Post List">
+    <template id="oe_latest_blog_post_list" name="oe_latest_blog_post_list">
         <t t-ignore="true">
             <t t-if="blog_posts">
                 <div class="oe_latest_blog_post_list">
