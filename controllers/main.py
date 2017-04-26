@@ -11,7 +11,7 @@ from odoo.addons.website.models.website import slug
 from odoo.http import request
 
 class LatestBlogPost(http.Controller):
-    @http.route('/snippet/get_latest_blog_post')
+    @http.route('/blogpost/get_latest_blog_post')
     def get_latest_blog_post(self):
         BlogPost = self.env['blog.post']
         result = {"blog_posts":[]}

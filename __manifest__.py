@@ -12,8 +12,8 @@
     'images' : [''],
     'depends' : ['website_blog'],
     'data': [
-        'security/security.xml',
-        'security/ir.model.access.csv',
+        # 'security/security.xml',
+        # 'security/ir.model.access.csv',
         'views/template.xml',
         'views/snippet_small.xml',
     ],
