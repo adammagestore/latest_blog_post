@@ -2,7 +2,7 @@
 <odoo>
     <template id="latest_blog_post.assets_frontend" inherit_id="website.assets_frontend" name="Latest Blog Post Assets Frontend">
         <xpath expr="//script[last()]" position="after">
-            <script type="text/javascript" src="/latest_blog_post/static/src/js/snippet_small.js"></script>
+            <script type="text/javascript" src="/latest_blog_post/static/src/js/snippet_small_layout.js"></script>
         </xpath>
         <xpath expr="//link[last()]" position="after">
             <link rel='stylesheet' type="text/css" href='/latest_blog_post/static/src/css/style.css'/>

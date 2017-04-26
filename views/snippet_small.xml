@@ -23,7 +23,7 @@
             </div>
         </xpath>
         <xpath expr="//div[@id='snippet_options']" position="inside">
-            <div data-js='snippet_latest_blog_post'
+            <div data-js='oe_snippet_latest_blog_post'
                 data-selector=".oe_latest_blog_post"
                 data-drop-near="p, h1, h2, h3, blockquote, .well, .panel"
                 data-drop-in=".content"
